@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Cat2.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 14:38:12 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 16:22:28 by brandebr         ###   ########.fr       */
+/*   Created: 2024/10/03 13:36:31 by brandebr          #+#    #+#             */
+/*   Updated: 2024/10/03 15:00:52 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "Elephant.hpp"
 
-WrongCat::WrongCat(void) {
-	this->_type = "WrongCat";
+Elephant::Elephant(void)/* : public Animal(), _type("Elephant") */{
+	this->_type = "Elephant";
 	std::cout << this->_type << " created with default constructor" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy) {
+Elephant::Elephant(const Elephant& copy) : Animal(copy) {
 	std::cout << this->_type  << " created with copy constructor" << std::endl;
 	*this = copy;
 }
 
-WrongCat& WrongCat::operator=(const WrongCat& copy) {
+Elephant& Elephant::operator=(const Elephant& copy) {
 	if (this != &copy) {
 		this->_type = copy._type;
 	}
-	std::cout  << "WrongCat assignement operator called" << std::endl;
+	std::cout  << "Elephant assignement operator called" << std::endl;
 	return *this;
 }
 
-WrongCat::~WrongCat(void) {
-	std::cout << "WrongCat deconstructor called" << std::endl;
+Elephant::~Elephant(void) {
+	std::cout << "Elephant deconstructor called" << std::endl;
 }
 
-void WrongCat::makeSound(void) const {
-	std::cout << " 🐋 Wufffff  🐉" << std::endl;
+void Elephant::makeSound(void) const {
+	std::cout << "😸  Miiaaooo!! 🐈" << std::endl;
 }
+//sed -i s/Cat/Elephant/g Cat2.cpp
+//for dir in ex*/; do (cd "$dir" && make); done
+// for dir in ex*/; do (cd "$dir" && make fclean); done
 

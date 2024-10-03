@@ -6,13 +6,13 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:36:31 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 14:21:21 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/03 16:19:16 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void)/* : public Animal(), _type("Cat") */{
+Cat::Cat(void) {
 	this->_type = "Cat";
 	std::cout << this->_type << " created with default constructor" << std::endl;
 }
