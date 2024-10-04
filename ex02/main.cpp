@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:52:07 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/04 13:28:03 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:27:26 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,6 @@ int main() {
 	delete copyCat;
 
 	std::cout << BLUE << BOLD << "All animals deconstructed!" << RESET << std::endl;
-
+	//Animal * boo = new Animal();
 	return 0;
 }
