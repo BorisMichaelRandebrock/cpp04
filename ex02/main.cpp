@@ -6,12 +6,12 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:52:07 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/04 13:27:26 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:32:26 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "WrongAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -20,7 +20,7 @@
 int main() {
 	std::cout << "\033[2J\033[H" << std::endl;
 	const int size = 4;
-	Animal* animals[size];
+	AAnimal* animals[size];
 
 	std::cout << YELLOW << BOLD << "Creating Animals..." << RESET << std::endl;
 	for (int i = 0; i < size / 2; i++) {
@@ -92,6 +92,6 @@ int main() {
 	delete copyCat;
 
 	std::cout << BLUE << BOLD << "All animals deconstructed!" << RESET << std::endl;
-	//Animal * boo = new Animal();
+	//AAnimal * boo = new Animal();
 	return 0;
 }

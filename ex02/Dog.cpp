@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:20:24 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/04 12:35:36 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:31:14 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog(void) {
 	std::cout << _type << " 🐶 created with default constructor." << std::endl;
 }
 
-Dog::Dog(const Dog& copy) : Animal(copy) {
+Dog::Dog(const Dog& copy) : AAnimal(copy) {
 	this->_brain = new Brain(*copy._brain);
 	std::cout << _type << " 🐶 created with copy contructor"  << std::endl;
 	*this = copy;

@@ -6,16 +6,16 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:30:52 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 18:04:09 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:30:46 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-class Cat : public Animal {
+class Cat : public AAnimal {
 	private:
 		Brain	*_brain;
 

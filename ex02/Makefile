@@ -6,17 +6,17 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/03 10:35:49 by brandebr          #+#    #+#              #
-#    Updated: 2024/10/03 18:05:12 by brandebr         ###   ########.fr        #
+#    Updated: 2024/10/04 16:32:47 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = I_don’t_want_to_set_the_world_on_fire 
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRC = main.cpp AAnimal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJ_DIR = obj/
 
-HEADERS = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+HEADERS = AAnimal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 

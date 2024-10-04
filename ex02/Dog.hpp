@@ -6,16 +6,16 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:12:18 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 18:04:31 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:31:32 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 
-class Dog : public Animal {
+class Dog : public AAnimal {
 	private:
 		Brain	*_brain;
 

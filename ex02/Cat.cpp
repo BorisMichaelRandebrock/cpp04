@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:36:31 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/04 11:49:10 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:30:21 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat(void) {
 	std::cout << this->_type << " 🐱 created with default constructor" << std::endl;
 }
 
-Cat::Cat(const Cat& copy) : Animal(copy) {
+Cat::Cat(const Cat& copy) : AAnimal(copy) {
 	this->_brain = new Brain(*copy._brain);
 	std::cout << this->_type  << " 🐱 created with copy constructor" << std::endl;
 	*this = copy;
