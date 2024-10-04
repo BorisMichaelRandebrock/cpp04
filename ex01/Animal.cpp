@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:32:03 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 13:19:03 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 12:36:02 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Animal& Animal::operator=(const Animal &copy) {
 }
 
 Animal::~Animal(void) {
-	std::cout << "Animal destructor called on " << this->_type << std::endl;
+	std::cout << "Animal deconstructor called on " << this->_type << std::endl;
 }
 
 std::string Animal::getType(void) const {

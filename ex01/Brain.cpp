@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 16:37:40 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/03 18:10:23 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/04 12:26:43 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Brain& Brain::operator=(const Brain& copy) {
 }
 
 Brain::~Brain(void) {
-	std::cout << "Brain severely dammaged, if nothing else,.. destroyed." << std::endl;
+	std::cout << "Brain deconstructd." << std::endl;
 }
 
 const std::string&	Brain::getIdeas(const int& i) const {
