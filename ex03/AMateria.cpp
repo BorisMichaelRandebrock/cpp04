@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:20:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 13:38:00 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:00:01 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ const std::string& AMateria::getType(void) {
 //AMateria AMateria::*clone(void) {}
 
 void	AMateria::use(ICharacter& target) {
+	std::cout << "Used materia " << target.getName() << std::endl;
 }
 
 

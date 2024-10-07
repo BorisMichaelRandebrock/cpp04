@@ -6,7 +6,7 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 11:09:03 by brandebr          #+#    #+#              #
-#    Updated: 2024/10/07 11:51:20 by brandebr         ###   ########.fr        #
+#    Updated: 2024/10/07 18:04:36 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -g
+FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD -g
 
 all: Makefile $(NAME)
 

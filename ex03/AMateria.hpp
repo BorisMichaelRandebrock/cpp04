@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:11:32 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 13:23:21 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:50:13 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AMATERIA
 
 #include <iostream>
+#include "ICharacter.hpp"
 
 #define RESET   "\033[0m"
 #define BOLD     "\033[1m"
@@ -26,6 +27,8 @@
 #define MAGENTA "\033[35m"
 #define CYAN    "\033[36m"
 #define WHITE   "\033[37m"
+
+#define INV = 4;
 
 class AMateria {
 	protected:
@@ -41,7 +44,7 @@ class AMateria {
 		const std::string&	getType(void);
 
 		virtual AMateria*	clone(void) const = 0;
-	//	virtual void		use(ICharacter& target);
+		virtual void		use(ICharacter& target);
 };
 
 #endif

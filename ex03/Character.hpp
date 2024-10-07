@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:41:40 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 14:38:24 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:49:46 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
 
-#define INV = 4;
+//#define INV = 4; defined iin AMateri.hpp
 
 class Character : public ICharacter {
 	private:
