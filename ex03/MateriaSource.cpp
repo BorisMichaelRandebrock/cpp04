@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:12:56 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 12:19:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:10:31 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ void MateriaSource::learnMateria(AMateria *m) {
 		std::cout << "You can not learn more than 4 Materias" << std::endl;
 	}
 }
-
+//TODO
 AMateria *MateriaSource::createMateria(const std::string& type) {
 	int	i;
 	for (i = 0; i < INV; i++) {
 		if (this->_inventory[i] != NULL) {
-			if (type.compare(this->_inventory[i]->getType())) 
+			if (type.compare(this->_inventory[i]->getType()) == 0) 
 				return this->_inventory[i];
 		}
 	}

@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 14:45:20 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:35:42 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <iostream>
 #include "Cure.hpp"
 
-Cure::Cure(void) : AMateria("ice") {
-//	AMateria::_type = "ice";
+Cure::Cure(void) : AMateria("cure") {
 	std::cout << "Default constructor called for the materia " << this->_type << std::endl;
 }
 
@@ -32,7 +30,7 @@ Cure &Cure::operator=(const Cure& copy) {
 }
 
 Cure::~Cure() {
-	std::cout << "Cure melted with hot fire" << std::endl;
+	std::cout << "Cure gone bad,.. therefore being incinerated before causing any damage.." << std::endl;
 }
 
 AMateria	*Cure::clone(void) const {
@@ -41,5 +39,5 @@ AMateria	*Cure::clone(void) const {
 }
 
 void	Cure::use(ICharacter& target) {
-	std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
+	std::cout << "* heals " << target << "'s wounds *" << std::endl;
 }

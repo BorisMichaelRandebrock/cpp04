@@ -6,15 +6,13 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 14:45:20 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:35:10 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <iostream>
 #include "Ice.hpp"
 
 Ice::Ice(void) : AMateria("ice") {
-//	AMateria::_type = "ice";
 	std::cout << "Default constructor called for the materia " << this->_type << std::endl;
 }
 
@@ -32,7 +30,7 @@ Ice &Ice::operator=(const Ice& copy) {
 }
 
 Ice::~Ice() {
-	std::cout << "Ice melted with hot fire" << std::endl;
+	std::cout << "Ice being melted in a bowl of hot water..." << std::endl;
 }
 
 AMateria	*Ice::clone(void) const {

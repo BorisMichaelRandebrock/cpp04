@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:44:22 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 13:36:17 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:21:33 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "IMateriaSource.hpp"
 
-class MateriaSource {
+class MateriaSource : public IMateriaSource {
 	private:
 		AMateria	*_inventory[INV];
 		int			_idx;

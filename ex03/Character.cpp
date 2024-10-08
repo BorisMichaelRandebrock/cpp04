@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:38:44 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 15:17:38 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:49:19 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,23 @@ void	Character::equip(AMateria* m) {
 }
 
 void	Character::unequip(int idx) {
-	(void)idx;
+	if (idx < 0 || idx >= INV)
+		std::cout << "The materia " << idx << "is not in inventory" << std::endl;
+	if (this->_inventory[idx] != NULL) 
+		this->_inventory[idx] = NULL;
+	else
+		std::cout << "The inventory postion " << idx << " is empty, you can noy drop anything!" << std::endl;
 }
+
 void	Character::use(int idx, ICharacter& target) {
-	(void)idx;
-	(void)target;
+	if (idx < 0 || idx >= INV) {
+		std::cout << "You have nothing equipped in the inventory position " << idx << std::endl;
+		return;
+	}
+	if (this->_inventory[idx] != NULL)
+		this->_inventory[idx]->use(target);
+	else
+		std::cout << "Inventory in position " << idx << " is empty... nothing  there to be used.." << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& os, const ICharacter& character) {
