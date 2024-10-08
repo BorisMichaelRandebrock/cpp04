@@ -6,17 +6,17 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 11:09:03 by brandebr          #+#    #+#              #
-#    Updated: 2024/10/07 18:04:36 by brandebr         ###   ########.fr        #
+#    Updated: 2024/10/08 14:58:08 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = AMateria 
 
-SRC = main.cpp AMateria.cpp 
+SRC = main.cpp AMateria.cpp Character.cpp MateriaSource.cpp Ice.cpp Cure.cpp
 
 OBJ_DIR = obj/
 
-HEADERS = AMateria.hpp 
+HEADERS = AMateria.hpp ICharacter.hpp Character.hpp IMateriaSource.hpp MateriaSource.hpp Ice.hpp Cure.hpp
 
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 

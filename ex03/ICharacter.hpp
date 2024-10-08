@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:41:40 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 14:38:12 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 14:43:52 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ class ICharacter {
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
 };
+std::ostream& operator<<(std::ostream& os, const ICharacter& character);
 
 #endif

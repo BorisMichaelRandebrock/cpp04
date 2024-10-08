@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:12:56 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 18:46:17 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:19:39 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ MateriaSource::MateriaSource(const MateriaSource& copy) {
 	std::cout << "Copy constructor called for Materia " << std::endl;
 }
 
-MateriaSourcei& MateriaSource::operator=(const MateriaSource& copy ) {
+MateriaSource& MateriaSource::operator=(const MateriaSource& copy ) {
 	this->_idx = copy._idx;
 	if (this != &copy) {
-		for (int i = 0, i < INV, i++) {
+		for (int i = 0; i < INV; i++) {
 			this->_inventory[i] = copy._inventory[i];
 		}
 	}
@@ -34,15 +34,15 @@ MateriaSourcei& MateriaSource::operator=(const MateriaSource& copy ) {
 
 MateriaSource::~MateriaSource(void) {
 	for (int i = 0; i < INV; i++) {
-		if (this->_inventory[i] != nullptr)
+		if (this->_inventory[i] != NULL)
 			delete this->_inventory[i];
 	}
 	std::cout << "Default destructor called for Materia " << std::endl;
 }
 
 void MateriaSource::learnMateria(AMateria *m) {
-	if (ths_idx < INV) {
-		std::cout << "Now you know-how to create: " << m.getType() << std::endl;
+	if (this->_idx < INV) {
+		std::cout << "Now you know-how to create: " << m->getType() << std::endl;
 		this->_inventory[this->_idx] = m;
 		this->_idx++;
 	} else {
@@ -50,16 +50,16 @@ void MateriaSource::learnMateria(AMateria *m) {
 	}
 }
 
-AMateria MateriaSource::createMateria(const std::string& type) {
+AMateria *MateriaSource::createMateria(const std::string& type) {
 	int	i;
 	for (i = 0; i < INV; i++) {
-		if (this->_inventory[i] != nullptr) {
+		if (this->_inventory[i] != NULL) {
 			if (type.compare(this->_inventory[i]->getType())) 
 				return this->_inventory[i];
 		}
 	}
 	if (i == INV) {
-		std::cout << "You  can not create " << type << " withou having it studied first....!" <<std::end;
+		std::cout << "You  can not create " << type << " withou having it studied first....!" <<std::endl;
 	}
 	return NULL;
 }

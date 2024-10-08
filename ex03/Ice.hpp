@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:44:22 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 13:36:17 by brandebr         ###   ########.fr       */
+/*   Created: 2024/10/08 13:51:10 by brandebr          #+#    #+#             */
+/*   Updated: 2024/10/08 14:38:07 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-# define MATERIASOURCE_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-# include "IMateriaSource.hpp"
+#include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-class MateriaSource {
-	private:
-		AMateria	*_inventory[INV];
-		int			_idx;
+class Ice : virtual public AMateria {
 
 	public:
-		MateriaSource(void);
-		MateriaSource(const MateriaSource& copy);
-		MateriaSource &operator=(const MateriaSource& copy);
-		~MateriaSource(void);
+		Ice(void);
+	//	Ice(const std::string& type);
+		Ice(const Ice& copy);
+		Ice& operator=(const Ice& copy);
+		~Ice();
 
-		virtual void		learnMateria(AMateria *m);
-		virtual	AMateria	*createMateria(const std::string &type);
+		AMateria*		clone() const;
+		virtual void	use(ICharacter& target);
 };
 
 #endif

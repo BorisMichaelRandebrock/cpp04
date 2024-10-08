@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:11:32 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 17:50:13 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:56:44 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 #define CYAN    "\033[36m"
 #define WHITE   "\033[37m"
 
-#define INV = 4;
+#define INV 4
 
 class AMateria {
 	protected:
@@ -39,7 +39,7 @@ class AMateria {
 		AMateria(const std::string& type);
 		AMateria(const AMateria& copy);
 		AMateria& operator=(const AMateria& copy);
-		~AMateria(void);
+		virtual ~AMateria(void);
 
 		const std::string&	getType(void);
 
