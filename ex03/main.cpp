@@ -17,7 +17,99 @@
 #include "MateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include <unistd.h>
 
+int main(void)
+{
+    std::string studentName;
+
+    std::cout << YELLOW << BOLD << "[ Welcome to Gandalf's Magical Training Academy! ]" << RESET << std::endl;
+
+    std::cout << CYAN << "Gandalf the White is preparing to teach a student how to wield magical Materia..." << RESET << std::endl;
+    sleep(1);
+
+    // Ask for the student's name
+    std::cout << MAGENTA << "Enter the name of Gandalf's student: " << RESET;
+    std::getline(std::cin, studentName);
+
+    std::cout << GREEN << "Gandalf welcomes his eager student, " << studentName << ", to the lesson." << RESET << std::endl;
+    sleep(1);
+
+    // Begin creating and equipping Materia
+    IMateriaSource *src = new MateriaSource();
+    src->learnMateria(new Ice());
+    src->learnMateria(new Cure());
+
+    std::cout << GREEN << "Gandalf prepares his legendary inventory!" << RESET << std::endl;
+    sleep(1);
+    ICharacter *gandalf = new Character("Gandalf the White");
+    // Create the student character
+    ICharacter *student = new Character(studentName);
+
+    AMateria *tmp;
+
+    // Gandalf equips Ice
+    std::cout << BLUE << "Gandalf shows " << studentName << " how to create and equip Ice Materia." << RESET << std::endl;
+    sleep(1);
+    tmp = src->createMateria("ice");
+    gandalf->equip(tmp);
+
+    // Gandalf equips another Ice
+    std::cout << BLUE << "\"More frost, more power!\" Gandalf equips another Ice Materia." << RESET << std::endl;
+    sleep(1);
+    tmp = src->createMateria("ice");
+    gandalf->equip(tmp);
+
+    // Gandalf equips Cure
+    std::cout << MAGENTA << "Next, Gandalf demonstrates the power of healing with Cure Materia." << RESET << std::endl;
+    sleep(1);
+    tmp = src->createMateria("cure");
+    gandalf->equip(tmp);
+
+    // Attempt to equip a fourth Materia
+    std::cout << CYAN << "Gandalf equips another Cure Materia to complete the limit." << RESET << std::endl;
+    sleep(1);
+    tmp = src->createMateria("cure");
+    gandalf->equip(tmp);
+
+    // Try equipping beyond the limit
+    std::cout << RED_BACKGROUND << "Gandalf: \"Watch this, " << studentName << "! I will try to equip a fifth Materia...\"" << RESET << std::endl;
+    sleep(1);
+    tmp = src->createMateria("ice");
+    gandalf->equip(tmp);
+    std::cout << RED << "Gandalf: \"Oops! We cannot equip more than four Materias at once.\"" << RESET << std::endl;
+    sleep(2);
+
+
+    // Gandalf demonstrates Ice
+    std::cout << BLUE << "Gandalf turns to " << studentName << " and says, \"Now, witness the power of Ice!\"" << RESET << std::endl;
+    sleep(1);
+    gandalf->use(0, *student);
+
+    // Student feels the effect
+    std::cout << YELLOW << studentName << " shivers as the ice bolt strikes!" << RESET << std::endl;
+    sleep(1);
+
+    // Gandalf heals the student
+    std::cout << MAGENTA << "Gandalf smiles and says, \"Don't worry, I will heal you now!\"" << RESET << std::endl;
+    sleep(1);
+    gandalf->use(2, *student);
+
+    std::cout << GREEN << studentName << " feels much better after the healing!" << RESET << std::endl;
+    sleep(1);
+
+    // Clean up
+    delete student;
+    delete gandalf;
+    delete src;
+
+    std::cout << YELLOW << BOLD << "[ Gandalf's Magical Lesson is Over! ]" << RESET << std::endl;
+
+    return 0;
+}
+
+
+/*
 int main(void)
 {
     std::cout << YELLOW << BOLD << "[ Welcome to the Ultimate Materia Showdown! ]" << RESET << std::endl;
@@ -76,6 +168,7 @@ int main(void)
 
     return 0;
 }
+*/
 /*
 int	main() {
 	std::cout << "Hello Wally " << std::endl;

@@ -21,7 +21,7 @@ Character::Character(void) : _idx(0) {
 Character::Character(const std::string& name) : /*_idx(0),*/ _name(name), _idx(0) {
 	for (int i = 0; i < INV; i++)
 		_inventory[i] = NULL;
-	std::cout << "Character constructor called with name" << name <<  std::endl;
+	std::cout << "Character constructor called with name " << name <<  std::endl;
 }
 
 Character::Character(const Character& copy) {
