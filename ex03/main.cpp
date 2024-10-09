@@ -18,12 +18,70 @@
 #include "Ice.hpp"
 #include "Cure.hpp"
 
+int main(void)
+{
+    std::cout << YELLOW << BOLD << "[ Welcome to the Ultimate Materia Showdown! ]" << RESET << std::endl;
+
+    std::cout << CYAN << "Gandalf the White is gathering magical Materia..." << RESET << std::endl;
+    {
+        IMateriaSource *src = new MateriaSource();
+        src->learnMateria(new Ice());
+        src->learnMateria(new Cure());
+
+        std::cout << GREEN << "Gandalf prepares his legendary inventory!" << RESET << std::endl;
+        ICharacter *gandalf = new Character("Gandalf the White");
+
+        AMateria *tmp;
+        std::cout << BLUE << "Gandalf decides to equip some frosty Materia." << RESET << std::endl;
+        tmp = src->createMateria("ice");
+        gandalf->equip(tmp);
+
+        std::cout << BLUE << "Gandalf thinks: \"More frost is better!\" and equips another ice Materia." << RESET << std::endl;
+        tmp = src->createMateria("ice");
+        gandalf->equip(tmp);
+
+        std::cout << MAGENTA << "But wait! Healing is important too! Gandalf equips a cure Materia." << RESET << std::endl;
+        tmp = src->createMateria("cure");
+        gandalf->equip(tmp);
+
+        tmp = src->createMateria("cure");
+        gandalf->equip(tmp);
+	
+        tmp = src->createMateria("cure");
+        gandalf->equip(tmp);
+
+        std::cout << RED_BACKGROUND << "Gandalf's inventory is full! Can't equip more Materia!" << RESET << std::endl;
+
+        std::cout << CYAN << "Enter Bob the Brave!" << RESET << std::endl;
+        ICharacter *bob = new Character("Bob the Brave");
+
+        std::cout << BLUE << "Gandalf uses his icy powers against Bob!" << RESET << std::endl;
+        gandalf->use(0, *bob);
+
+        std::cout << MAGENTA << "Bob shivers, but Gandalf decides to be merciful and follows up with healing magic!" << RESET << std::endl;
+        gandalf->use(2, *bob);
+
+        std::cout << YELLOW << "Gandalf decides to unequip some of his Materia to prepare for the next battle..." << RESET << std::endl;
+        gandalf->unequip(0);
+        gandalf->unequip(1);
+
+        std::cout << GREEN << "Gandalf, proud of his magical arsenal, leaves the arena." << RESET << std::endl;
+
+        delete bob;
+        delete gandalf;
+        delete src;
+    }
+
+    std::cout << YELLOW << BOLD << "[ The Showdown is Over! ]" << RESET << std::endl;
+
+    return 0;
+}
 /*
 int	main() {
 	std::cout << "Hello Wally " << std::endl;
 	return 0;
 }*/
-
+/*
 int main(void)
 {
 std::cout << BOLD << BLUE << "\n[ Welcome to the Ultimate Materia Showdown! ]" << RESET << std::endl;
@@ -50,8 +108,7 @@ std::cout << BOLD << BLUE << "\n[ Welcome to the Ultimate Materia Showdown! ]" <
     std::cout << GREEN << "But wait! Healing is important too! Wally equips a cure Materia." << RESET << std::endl;
     tmp = src->createMateria("cure");
     wally->equip(tmp);
-
-/*    // Wally tries to equip a fourth Materia
+    // Wally tries to equip a fourth Materia
     std::cout << RED_BACKGROUND << BOLD_RED << "Wally's inventory is full! Can't equip more!" << RESET << std::endl;
 
     // Meet Bob the Brave!
@@ -70,12 +127,31 @@ std::cout << BOLD << BLUE << "\n[ Welcome to the Ultimate Materia Showdown! ]" <
     wally->unequip(1); // Unequip second Materia
 
     std::cout << BLUE << "Wally, proud of his magical arsenal, leaves the arena." << RESET << std::endl;
-*/
     // Cleanup
-//    delete bob;
+    delete bob;
     delete wally;
     delete src;
 
     std::cout << BOLD << GREEN << "\n[ The Showdown is Over! ]" << RESET << std::endl;
     return 0;
 }
+int main()
+{
+IMateriaSource* src = new MateriaSource();
+src->learnMateria(new Ice());
+src->learnMateria(new Cure());
+ICharacter* me = new Character("me");
+AMateria* tmp;
+tmp = src->createMateria("ice");
+me->equip(tmp);
+tmp = src->createMateria("cure");
+me->equip(tmp);
+ICharacter* bob = new Character("bob");
+me->use(0, *bob);
+me->use(1, *bob);
+delete bob;
+delete me;
+delete src;
+return 0;
+}
+*/
