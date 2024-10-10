@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:12:56 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/10 14:30:32 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:29:24 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void MateriaSource::learnMateria(AMateria *m) {
 		std::cout << "You can not learn more than 4 Materias" << std::endl;
 	}
 }
-//TODO
+
 AMateria *MateriaSource::createMateria(const std::string& type) {
 	int	i;
 	for (i = 0; i < INV; i++) {
@@ -59,7 +59,7 @@ AMateria *MateriaSource::createMateria(const std::string& type) {
 		}
 	}
 	if (i == INV) {
-		std::cout << "You  can not create " << type << " withou having it studied first....!" <<std::endl;
+		std::cout << "You  can not create " << type << " without having it studied first....!" << std::endl;
 	}
 	return NULL;
 }

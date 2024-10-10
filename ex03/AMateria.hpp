@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:11:32 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 11:56:44 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:48:06 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class AMateria {
 		AMateria& operator=(const AMateria& copy);
 		virtual ~AMateria(void);
 
-		const std::string&	getType(void);
+		const std::string&	getType(void) const;
 
 		virtual AMateria*	clone(void) const = 0;
 		virtual void		use(ICharacter& target);

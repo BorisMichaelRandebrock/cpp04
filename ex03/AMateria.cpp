@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:20:01 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/07 17:00:01 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:49:59 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ AMateria::AMateria(const std::string& type) : _type(type) {
 
 AMateria::AMateria(const AMateria& copy) {
 	*this = copy;
-	std::cout << "Copy constructor called with type " << _type << std::endl;  
+	std::cout << "Copy constructor called with type " << copy.getType() << std::endl;  
 }
 
 AMateria& AMateria::operator=(const AMateria& copy) {
@@ -37,7 +37,7 @@ AMateria::~AMateria(void) {
 	std::cout << "The materia " << this->_type << " has been destroyed" << std::endl;
 }
 
-const std::string& AMateria::getType(void) {
+const std::string& AMateria::getType(void) const {
 	return _type;
 }
 

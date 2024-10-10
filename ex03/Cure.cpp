@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 17:35:42 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:55:17 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure(void) : AMateria("cure") {
 
 Cure::Cure(const Cure& copy) {
 	*this = copy;
-	std::cout << "Copy constructor called for materia " << &copy._type << std::endl;
+	std::cout << "Copy constructor called for materia " << copy.getType() << std::endl;
 }
 
 Cure &Cure::operator=(const Cure& copy) {

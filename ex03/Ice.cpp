@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
+/*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/10 12:09:12 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:55:42 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice(void) : AMateria("ice") {
 
 Ice::Ice(const Ice& copy) {
 	*this = copy;
-	std::cout << "Copy constructor called for materia " << &copy._type << std::endl;
+	std::cout << "Copy constructor called for materia " << copy.getType() << std::endl;
 }
 
 Ice &Ice::operator=(const Ice& copy) {

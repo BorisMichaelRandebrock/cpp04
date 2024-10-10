@@ -6,7 +6,7 @@
 #    By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 11:09:03 by brandebr          #+#    #+#              #
-#    Updated: 2024/10/10 14:22:12 by brandebr         ###   ########.fr        #
+#    Updated: 2024/10/10 16:12:37 by brandebr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ valgrind: $(NAME)
 	@valgrind --leak-check=full --track-origins=yes ./$(NAME)
 
 totvalgrind: $(NAME)
-	@valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)

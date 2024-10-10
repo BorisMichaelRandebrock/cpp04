@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:38:44 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/10 14:26:39 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:04:38 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Character::Character(void) : _idx(0) {
 	std::cout << "Default character constructor called" << std::endl;
 }
 
-Character::Character(const std::string& name) : /*_idx(0),*/ _name(name), _idx(0) {
+Character::Character(const std::string& name) : _name(name) {
 	for (int i = 0; i < INV; i++)
 		_inventory[i] = NULL;
 	std::cout << "Character constructor called with name " << name <<  std::endl;
