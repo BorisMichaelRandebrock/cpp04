@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/08 17:35:10 by brandebr         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:09:12 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ Ice::~Ice() {
 }
 
 AMateria	*Ice::clone(void) const {
-	Ice *copy = new Ice();
-	return copy;
+	return new Ice(*this);
+//	Ice *copy = new Ice();
+//	return copy;
 }
 
 void	Ice::use(ICharacter& target) {
