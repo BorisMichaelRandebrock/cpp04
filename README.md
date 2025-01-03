@@ -38,4 +38,4 @@ This exercise involved creating a `Brain` class to handle the ideas of `Dog` and
 The `Animal` class was made abstract to prevent instantiation, reinforcing the idea that it serves as a blueprint for derived classes. This modification ensures that only `Dog` and `Cat` and not `Animal` objects can be created while maintaining the same functionality.
 
 ### Chapter VI: Exercise 03 - Interface & Recap
-In this exercise, I implemented the `AMateria` class and its derived classes `Ice` and `Cure`. I defined interfaces using pure abstract classes to enforce method implementation in derived classes with the prefix `I` like in `ICharacter`. Additionally, I created a `Character` class that interacts with `AMateria`, emphasizing the importance of interfaces in C++.
+In this exercise, I implemented the `AMateria` class and its derived classes `Ice` and `Cure`. I defined interfaces using pure abstract classes to enforce method implementation in derived classes with the prefix `I` like in `ICharacter`. Additionally, I created a `Character` class that interacts with `AMateria`, emphasizing the importance of interfaces in C++. 
