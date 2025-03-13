@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/10 17:55:42 by brandebr         ###   ########.fr       */
+/*   Updated: 2025/03/13 16:37:18 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ Ice::Ice(void) : AMateria("ice") {
 	std::cout << "Default constructor called for the materia " << this->_type << std::endl;
 }
 
-Ice::Ice(const Ice& copy) {
-	*this = copy;
+Ice::Ice(const Ice& copy) : AMateria(copy) {
+	//*this = copy;
 	std::cout << "Copy constructor called for materia " << copy.getType() << std::endl;
 }
 
@@ -35,8 +35,8 @@ Ice::~Ice() {
 
 AMateria	*Ice::clone(void) const {
 	return new Ice(*this);
-//	Ice *copy = new Ice();
-//	return copy;
+	//Ice *copy = new Ice();
+	//return copy;
 }
 
 void	Ice::use(ICharacter& target) {

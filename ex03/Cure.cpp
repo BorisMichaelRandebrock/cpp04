@@ -6,7 +6,7 @@
 /*   By: brandebr <brandebr@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:10:17 by brandebr          #+#    #+#             */
-/*   Updated: 2024/10/10 17:55:17 by brandebr         ###   ########.fr       */
+/*   Updated: 2025/03/13 16:27:03 by brandebr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ Cure::Cure(void) : AMateria("cure") {
 	std::cout << "Default constructor called for the materia " << this->_type << std::endl;
 }
 
-Cure::Cure(const Cure& copy) {
-	*this = copy;
+Cure::Cure(const Cure& copy) : AMateria(copy) {
+	//*this = copy;
 	std::cout << "Copy constructor called for materia " << copy.getType() << std::endl;
 }
 
